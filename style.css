@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Orbitron:wght@400..900&family=Syncopate:wght@400;700&family=Tilt+Neon&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: max-content;
+    background-color: #101010;
+}  
+header{
+    width: 100%;
+    padding: 10px 10px;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+header nav{
+    background-color: rgba(0, 0, 0, 0.267);
+    padding: 5px 30px;
+    border-radius: 30px;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+header nav ul li{
+    font-family: "Audiowide", sans-serif;
+    list-style-type: none;
+    padding: 5px 25px;
+    margin: 0px 5px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+main .section1{
+    height: 90vh;
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    justify-content: center;
+}
+main .section1 h1{
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+}
+main .section1 p{
+    color: white;
+    font-family: "Audiowide", sans-serif;
+}
+main .section1 nav{
+    margin-top: 50px;
+}
+main .section1 a{
+    color: white;
+    border: 1px solid grey;
+    text-decoration: none;
+    font-family: "Audiowide", sans-serif;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+main .section1 a i{
+    margin-right: 7px;
+}
