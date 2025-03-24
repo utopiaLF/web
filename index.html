@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="" class="logo">Utopia Web</a>
-        <nav>
+        <nav id="barList" class="barList">
             <ul>
                 <li><a href="">Main</a></li>
                 <li><a href="">Skills</a></li>
@@ -19,7 +19,15 @@
             </ul>
         </nav>
 
-        <button class="settings"><i class="fa-solid fa-sliders"></i></button>
+        <!-- <button class="settings"><i class="fa-solid fa-sliders"></i></button> -->
+        <div>
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
     </header>
 
     <main>
@@ -38,5 +46,7 @@
             </div>
         </section>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
