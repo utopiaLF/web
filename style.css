@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Orbitron:wght@400..900&family=Syncopate:wght@400;700&family=Tilt+Neon&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     width: 100%;
     height: max-content;
     /* background-color: #101010; */
-    background-color: black;
-}  
-header{
+    background-color: #8c6bcf;
+}
+
+header {
     width: 90%;
     padding: 10px 100px;
     /* background-color: grey; */
@@ -21,36 +24,42 @@ header{
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
-header .logo{
+
+header .logo {
     color: white;
     font-size: 2rem;
     text-decoration: none;
     font-family: "Audiowide", sans-serif;
 }
-header nav{
+
+header nav {
     /* background-color: rgba(0, 0, 0, 0.267); */
     padding: 5px 30px;
     border-radius: 30px;
     /* background: rgba(255, 255, 255, 0.078); */
 }
+
 header nav ul {
     display: flex;
     align-items: center;
     background: linear-gradient(to right, #a7c5eb, #9c4e97, #8c6bcf);
     -webkit-background-clip: text;
 }
-header nav ul li{
+
+header nav ul li {
     font-family: "Audiowide", sans-serif;
     list-style-type: none;
     padding: 5px 25px;
     margin: 0px 5px;
 }
-header nav ul li a{
+
+header nav ul li a {
     text-decoration: none;
     font-size: 1.3rem;
     color: transparent;
 }
-header .settings{
+
+header .settings {
     width: 50px;
     height: 50px;
     border: none;
@@ -59,72 +68,66 @@ header .settings{
     backdrop-filter: blur(10px);
     border-radius: 50%;
 }
-header .settings i{
+
+header .settings i {
     color: white;
     font-size: 1.3rem;
 }
-/* From Uiverse.io by Cevorob */ 
-.burger {
+
+/* From Uiverse.io by alexruix */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
     position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: block;
-    transform: scale(0.6);
-  }
-  
-  .burger input {
-    display: none;
-  }
-  
-  .burger span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
-  }
-  
-  .burger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
-  }
-main .section1{
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #8c6bcf;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px white;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #8c6bcf;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px black;
+}
+
+main .section1 {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -132,15 +135,27 @@ main .section1{
     /* background-image: url(images/nasa-Q1p7bh3SHj8-unsplash.jpg); */
     background-size: cover;
     padding-left: 100px;
+    position: relative;
 }
-/* main .section1 div{
-    padding: 30px;
-    width: max-content;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.174);
-    border-radius: 10px;
-} */
-main .section1 h1{
+
+main .section1::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 160%;
+    top: 0;
+    left: 0%;
+    background-color: black;
+    border-radius: 0% 50% 50% 0%;
+    z-index: 1;
+    /* border: 2px solid #c2e9fb; */
+}
+
+main .section1 div {
+    z-index: 2;
+}
+
+main .section1 h1 {
     color: white;
     font-family: "Orbitron", sans-serif;
     font-size: 3rem;
@@ -151,46 +166,56 @@ main .section1 h1{
     -webkit-background-clip: text;
     animation: backColors 3s infinite;
 }
-main .section1 p{
+
+main .section1 p {
     color: white;
     font-family: "Audiowide", sans-serif;
     margin-top: 30px;
 }
-main .section1 nav{
+
+main .section1 nav {
     margin-top: 50px;
+    display: flex;
+    column-gap: 10px;
 }
-main .section1 a{
-    color: white;
-    /* border: 1px solid grey; */
+
+main .section1 a {
+    padding: 5px 30px;
+    background-color: #c2e9fb;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-family: "Audiowide", sans-serif;
-    padding: 10px 30px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.155);
-    backdrop-filter: blur(10px);
-    box-shadow: inset 4px 4px 2px grey, 4px 4px 10px black;
-    margin-right: 10px;
+    border-radius: 5px;
+    font-family: "Tilt Neon", sans-serif;
     transition: all 0.2s ease;
 }
-main .section1 a:hover{
+
+main .section1 a:hover {
     background: rgba(255, 255, 255, 0.3);
 }
-main .section1 a i{
+
+main .section1 a i {
     margin-right: 7px;
 }
-main .section1 .scroll_text{
+
+main .section1 .scroll_text {
     position: absolute;
     top: 90%;
     left: 48%;
     animation: textAnime 4s infinite;
 }
-@keyframes textAnime{
-    50%{
+
+@keyframes textAnime {
+    50% {
         opacity: 0;
         transform: translateY(-5px);
     }
 }
-main .section2{
+
+main .section2 {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -200,17 +225,34 @@ main .section2{
     /* box-shadow: inset 0px 0px 40px 2px black;
     background-image: url(images/22001.jpg);
     background-size: cover; */
-    /* background: linear-gradient(to top, black, #8c6bcf); */
-    background-color: black;
+    background: linear-gradient(to top, black, #8c6bcf);
+    /* background-color: black; */
+    position: relative;
 }
-main .section2 h1{
+/* main .section2::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 22%;
+    height: 160%;
+    background-color: #8c6bcf;
+    border-radius: 0% 0% 0% 50%;
+} */
+main .section2 span {
+    z-index: 3;
+}
+
+main .section2 h1 {
     font-family: "Tilt Neon", sans-serif;
     font-size: 2.5rem;
     background: linear-gradient(to left, #a7c5eb, #9c4e97, #8c6bcf);
     color: transparent;
     -webkit-background-clip: text;
 }
-main .section2 .line{
+
+main .section2 .line {
+    z-index: 3;
     width: 600px;
     height: 100px;
     margin: 50px 0px;
@@ -218,12 +260,15 @@ main .section2 .line{
     border-left: 5px solid #8c6bcf;
     border-right: 5px solid #8c6bcf;
 }
-main .section2 div.infos{
+
+main .section2 div.infos {
+    z-index: 3;
     width: 1000px;
     display: flex;
     justify-content: space-around;
 }
-main .section2 div article{
+
+main .section2 div article {
     width: 300px;
     padding: 40px 20px;
     outline: 2px solid white;
@@ -233,23 +278,29 @@ main .section2 div article{
     position: relative;
     background-color: rgba(0, 0, 0, 0.221);
 }
-main .section2 div article p{
+
+main .section2 div article p {
     font-family: "Tilt Neon", sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     color: white;
 }
-main .section2 div article ul{
+
+main .section2 div article ul {
     margin-top: 20px;
     padding-left: 20px;
     color: white;
     font-family: "Tilt Neon", sans-serif;
 }
-main .section2 div article ul li{
+main .section2 div article ul li {
     margin-top: 5px;
 }
-
-main .section3{
+main .section2 span h2{
+    margin-top: 50px;
+    font-family: "Tilt Neon", sans-serif;
+    color: white;
+}
+main .section3 {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -258,7 +309,7 @@ main .section3{
     background: linear-gradient(to bottom, black, #8c6bcf);
 }
 
-main .section3 span h1{
+main .section3 span h1 {
     font-family: "Tilt Neon", sans-serif;
     font-size: 2.5rem;
     background: linear-gradient(to left, #a7c5eb, #9c4e97, #8c6bcf);
@@ -266,17 +317,18 @@ main .section3 span h1{
     -webkit-background-clip: text;
     margin-bottom: 50px;
 }
-main .section3 .projectsBox{
+
+main .section3 .projectsBox {
     padding: 30px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     box-sizing: border-box;
+    gap: 50px;
 }
 
-main .section3 div article{
-    width: 300px;
+main .section3 div article {
+    /* width: 100%; */
     height: max-content;
     background-color: #8c6bcf;
     display: flex;
@@ -286,7 +338,8 @@ main .section3 div article{
     position: relative;
     border-radius: 10px;
 }
-main .section3 div article::before{
+
+main .section3 div article::before {
     position: absolute;
     content: "";
     background-color: #8c6bcf;
@@ -297,15 +350,19 @@ main .section3 div article::before{
     z-index: -1;
     filter: blur(10px);
 }
-main .section3 div article h2{
+
+main .section3 div article h2 {
     color: black;
     font-family: "Tilt Neon", sans-serif;
     font-weight: 600;
+    margin-bottom: 15px;
 }
-main .section3 div article p{
+
+main .section3 div article p {
     font-family: "Tilt Neon", sans-serif;
 }
-main .section3 div article a{
+
+main .section3 div article a {
     margin-top: 20px;
     background-color: #a7c5eb;
     text-decoration: none;
@@ -316,35 +373,39 @@ main .section3 div article a{
     border-radius: 10px;
 }
 
-main .section4{
+main .section4 {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top, #a7c5eb, #8c6bcf);
+    /* background: linear-gradient(to top, #a7c5eb, #8c6bcf); */
 }
-main .section4 article{
+
+main .section4 article {
     width: 1000px;
     height: 400px;
     background-color: #8c6bcf;
     padding: 30px;
     border-radius: 10px;
 }
-main .section4 article h1{
+
+main .section4 article h1 {
     font-family: "Orbitron", sans-serif;
 }
 
-main .section5{
+main .section5 {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: self-start;
     justify-content: center;
-    background: linear-gradient(to bottom, #a7c5eb, black, black, black, black, black);
+    /* background: linear-gradient(to bottom, #a7c5eb, black, black, black, black, black); */
+    background-color: black;
     padding: 0px 100px;
 }
-main .section5 span h1{
+
+main .section5 span h1 {
     margin-top: 50px;
     font-family: "Orbitron", sans-serif;
     font-size: 3rem;
@@ -354,24 +415,27 @@ main .section5 span h1{
     margin-bottom: 50px;
 }
 
-main .section5 nav{
+main .section5 nav {
     display: flex;
     flex-direction: column;
     border-left: 3px dashed #a7c5eb;
     padding: 20px;
     row-gap: 30px;
 }
-main .section5 nav span{
+
+main .section5 nav span {
     display: flex;
     align-items: center;
 }
-main .section5 nav span a{
+
+main .section5 nav span a {
     color: #a7c5eb;
     font-family: "Tilt Neon", sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
 }
-main .section5 nav span i{
+
+main .section5 nav span i {
     margin-right: 20px;
     width: 50px;
     height: 50px;
@@ -383,14 +447,16 @@ main .section5 nav span i{
     color: black;
     font-size: 1.5rem;
 }
+
 @media (max-width: 768px) {
-    header .logo{
+    header .logo {
         position: absolute;
         top: 10px;
         left: 30%;
         font-size: 1.5rem;
     }
-    header nav{
+
+    header nav {
         position: absolute;
         left: 0;
         top: 0px;
@@ -399,27 +465,32 @@ main .section5 nav span i{
         width: 100%;
         transform: translateY(-100%);
     }
-    header nav.active{
+
+    header nav.active {
         top: 0px;
         transform: translateY(30%);
     }
-    header nav ul{
+
+    header nav ul {
         flex-direction: column;
         align-items: self-start;
     }
-    .burger{
+
+    .burger {
         position: absolute;
         left: 10px;
         top: 10px;
     }
 
-    main .section1{
+    main .section1 {
         padding: 30px;
     }
-    main .section1 h1{
+
+    main .section1 h1 {
         font-size: 2.3rem;
     }
-    main .section1 a{
+
+    main .section1 a {
         padding: 10px 10px;
     }
 }

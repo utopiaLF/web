@@ -1,6 +1,6 @@
 const menuButton = document.querySelector('.burger');
 const barList = document.getElementById('barList')
 
-menuButton.addEventListener('click', ()=>{
-    barList.classList.toggle('active');
-})
+// menuButton.addEventListener('click', ()=>{
+//     barList.classList.toggle('active');
+// })

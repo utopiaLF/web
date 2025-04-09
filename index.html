@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.11.0/rellax.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <title>Utopia</title>
 </head>
 <body>
@@ -19,29 +21,25 @@
             </ul>
         </nav>
 
-        <!-- <button class="settings"><i class="fa-solid fa-sliders"></i></button> -->
-        <div>
-            <label class="burger" for="burger">
-                <input type="checkbox" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
+        <!-- From Uiverse.io by alexruix --> 
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
     </header>
 
     <main>
         <section class="section1">
             <div>
                 <span>
-                    <h1>Hello, Welcome to my Website</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>Reiciendis, est voluptatem explicabo odio beatae perferendis eaque, illum vel, incidunt maiores <br> fugit blanditiis non aspernatur nemo possimus voluptas mollitia quis culpa.</p>
+                    <h1 data-aos="fade" data-aos-duration="2000" class="rellax" data-rellax-speed="2">Hello, Welcome to my Website</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="rellax" data-rellax-speed="-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>Reiciendis, est voluptatem explicabo odio beatae perferendis eaque, illum vel, incidunt maiores <br> fugit blanditiis non aspernatur nemo possimus voluptas mollitia quis culpa.</p>
                 </span>
     
                 <nav>
-                    <a href=""><i class="fa-brands fa-github"></i>GitHub</a>
-                    <a href=""><i class="fa-brands fa-telegram"></i>Telegram</a>
-                    <a href=""><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                    <a href="" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200" class="rellax" data-rellax-speed="-1"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400" class="rellax" data-rellax-speed="-2"><i class="fa-brands fa-telegram"></i>Telegram</a>
+                    <a href="" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600" class="rellax" data-rellax-speed="-3"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
                 </nav>
             </div>
 
@@ -52,13 +50,13 @@
 
         <section class="section2">
             <span>
-                <h1>Let's talk about my skills. So, what I know?</h1>
+                <h1 data-aos="fade-up" data-aos-duration="2000" class="rellax" data-rellax-speed="1">Let's talk about my skills. So, what I know?</h1>
             </span>
 
-            <div class="line"></div>
+            <div class="line" data-aos="fade-up" data-aos-duration="2000"></div>
             
             <div class="infos">
-                <article>
+                <article data-aos="fade-up" data-aos-duration="2000">
                     <p>Front-end</p>
                     <ul>
                         <li>Html <i class="fa-brands fa-html5"></i></li>
@@ -68,7 +66,7 @@
                     </ul>
                 </article>
 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="3000">
                     <p>Back-end</p>
                     <ul>
                         <li>PHP <i class="fa-brands fa-php"></i></li>
@@ -80,17 +78,17 @@
             </div>
 
             <span>
-                <h2>This information may change over time, because I'll keep evolving</h2>
+                <h2 data-aos="fade-up" data-aos-duration="3000">This information may change over time, because I'll keep evolving</h2>
             </span>
         </section>
 
         <section class="section3">
-            <span>
+            <span data-aos="fade-up" data-aos-duration="1500">
                 <h1>My Projects</h1>
             </span>
 
             <div class="projectsBox">
-                <article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
                     <span>
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -99,7 +97,7 @@
 
                     <a href="">Open <i class="fa-solid fa-link"></i></a>
                 </article>
-                <article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
                     <span>
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -108,7 +106,7 @@
 
                     <a href="">Open <i class="fa-solid fa-link"></i></a>
                 </article>
-                <article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
                     <span>
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -117,7 +115,7 @@
 
                     <a href="">Open <i class="fa-solid fa-link"></i></a>
                 </article>
-                <article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
                     <span>
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -126,7 +124,7 @@
 
                     <a href="">Open <i class="fa-solid fa-link"></i></a>
                 </article>
-                <article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
                     <span>
                         <h2>Name</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
@@ -135,10 +133,20 @@
 
                     <a href="">Open <i class="fa-solid fa-link"></i></a>
                 </article>
+                <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                    <span>
+                        <h2>Name</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                        Voluptatem a assumenda commodi accusamus, hic sint.</p>
+                    </span>
+
+                    <a href="">Open <i class="fa-solid fa-link"></i></a>
+                </article>
+                
             </div>
         </section>
 
-        <section class="section4">
+        <!-- <section class="section4">
             <article>
                 <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus voluptas saepe tenetur totam, vitae cumque porro. Dignissimos, eveniet unde omnis officiis velit distinctio sapiente ab nihil sunt. Cum, atque molestiae.</h1>
                 <br>
@@ -148,34 +156,41 @@
                 <br>
                 <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus voluptas saepe tenetur totam, vitae cumque porro. Dignissimos, eveniet unde omnis officiis velit distinctio sapiente ab nihil sunt. Cum, atque molestiae.</h1>
             </article>
-        </section>
+        </section> -->
 
         <section class="section5">
-            <span>
+            <span data-aos="fade-up" data-aos-duration="1000">
                 <h1>Here's my contacts, if you need:</h1>
             </span>
 
             <nav>
                 <span>
-                    <i class="fa-brands fa-telegram"></i>
-                    <a href="">Telegram</a>
+                    <i class="fa-brands fa-telegram" data-aos="fade-up" data-aos-duration="500"></i>
+                    <a href="" data-aos="fade-up" data-aos-duration="1500">Telegram</a>
                 </span>
                 <span>
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="">example@gmail.com</a>
+                    <i class="fa-solid fa-envelope" data-aos="fade-up" data-aos-duration="500"></i>
+                    <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">example@gmail.com</a>
                 </span>
                 <span>
-                    <i class="fa-brands fa-github"></i>
-                    <a href="">GitHub</a>
+                    <i class="fa-brands fa-github" data-aos="fade-up" data-aos-duration="500"></i>
+                    <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">GitHub</a>
                 </span>
                 <span>
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="">+998 93 512 04 36</a>
+                    <i class="fa-solid fa-phone" data-aos="fade-up" data-aos-duration="500"></i>
+                    <a href="" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">+998 93 512 04 36</a>
                 </span>
             </nav>
         </section>
     </main>
 
     <script src="app.js"></script>
+    <!-- <script>
+        var rellax = new Rellax('.rellax');
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
