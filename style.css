@@ -72,6 +72,77 @@ header .settings i {
     font-size: 1.3rem;
 }
 
+/* From Uiverse.io by Codecite */ 
+.loading{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    background-color: #12121256;
+}
+.loading.off{
+    backdrop-filter: blur(0px);
+    background-color: transparent;
+    display: none;
+}
+.ld-ripple {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .ld-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ld-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  
+  .ld-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  
+  @keyframes ld-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+
 /* From Uiverse.io by alexruix */
 /* The switch - the box around the slider */
 .switch {
@@ -219,6 +290,7 @@ main .section2 {
     position: relative;
     background: linear-gradient(to bottom, #8c6bcf, #a7c5eb);
 }
+
 /* main .section2::before{
     position: absolute;
     content: '';
@@ -282,14 +354,17 @@ main .section2 div article ul {
     color: white;
     font-family: "Tilt Neon", sans-serif;
 }
+
 main .section2 div article ul li {
     margin-top: 5px;
 }
-main .section2 span h2{
+
+main .section2 span h2 {
     margin-top: 50px;
     font-family: "Tilt Neon", sans-serif;
     color: white;
 }
+
 main .section3 {
     height: 100vh;
     display: flex;
@@ -442,83 +517,100 @@ main .section5 nav span i {
 }
 
 @media (max-width: 768px) {
-    header{
+    header {
         display: none;
     }
-    main .section1{
+
+    main .section1 {
         padding-left: 20px;
     }
-    main .section1::before{
+
+    main .section1::before {
         height: 160%;
         width: 130%;
         border-radius: 0;
         transform: rotate(25deg) translate(-50%, -30%);
     }
-    main .section1 h1{
+
+    main .section1 h1 {
         font-size: 2rem;
     }
-    main .section1 nav{
+
+    main .section1 nav {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         row-gap: 10px;
     }
-    main .section1 a{
+
+    main .section1 a {
         padding: 4px 20px;
         font-size: 1rem;
     }
-    main .section2{
+
+    main .section2 {
         padding-bottom: 100px;
     }
-    main .section2 h1{
+
+    main .section2 h1 {
         font-size: 1.5rem;
         text-align: center;
         margin-bottom: 40px;
     }
-    main .section2 .line{
+
+    main .section2 .line {
         display: none;
     }
-    main .section2 div.infos{
+
+    main .section2 div.infos {
         width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         row-gap: 40px;
     }
-    main .section2 div.infos article{
+
+    main .section2 div.infos article {
         width: 80%;
     }
-    main .section2 span{
+
+    main .section2 span {
         padding: 0px 20px;
     }
-    main .section2 span h2{
+
+    main .section2 span h2 {
         text-align: center;
     }
 
-    main .section3{
-        height: max-content;
-    }
-    main .section3 .projectsBox{
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    main .section3 div article{
+    main .section3 {
         height: max-content;
     }
 
-    main .section5{
+    main .section3 .projectsBox {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .section3 div article {
+        height: max-content;
+    }
+
+    main .section5 {
         width: 100%;
         align-items: center;
         padding: 0px 0px;
     }
-    main .section5 span h1{
+
+    main .section5 span h1 {
         font-size: 1.5rem;
         text-align: center;
     }
-    main .section5 nav span a{
+
+    main .section5 nav span a {
         font-size: 1.2rem;
     }
-    main .section5 nav span i{
+
+    main .section5 nav span i {
         width: 40px;
         height: 40px;
     }
