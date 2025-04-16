@@ -1,3 +1,3 @@
-**This is my portfolio website and there's some information about me**
+## **This project is still under development**
 
 [You can visit the website here](https://utopiaLF.github.io/web)
